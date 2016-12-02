@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^api/verycd/post', 'verycd.views.doPost'),
     url(r'^api/google/post', 'google.views.doPost'),
     url(r'^api/bt/post', 'bt.views.doPost'),
+    url(r'^api/baidupan/post', 'baidupan.views.doPost'),
     url(r'^api/movie/list/(?P<page>\d+)$', 'movie.views.getList'),
     url(r'^api/movie/id/(?P<name>.+)$', 'movie.views.getMovieDes'),
     url(r'^api/movie/tv/(?P<name>.+)$', 'movie.views.getTvDes'),

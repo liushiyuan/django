@@ -32,7 +32,7 @@ def doPost(request):
 def doSearch(webURL):
     pagenum = ""
     try:
-        response = os.popen("wget -qO- %s" % (webURL))
+        response = os.popen("wget -qO- \"%s\"" % (webURL))
         result = response.read()
         content = result.split("<div class=\"search-item\">")
         content[0] = ""
@@ -51,7 +51,7 @@ def doGetDetail(url):
     url = url.split("/")[-1]
     webURL = "http://%s/%s" % (DomainName, url)
     try:
-        response = os.popen("wget -qO- %s" % (webURL))
+        response = os.popen("wget -qO- \"%s\"" % (webURL))
         result = response.read()
         magnet = result.split("magnet")[1]
         magnet = "magnet%s" % magnet.split("\"")[0]
