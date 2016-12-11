@@ -39,6 +39,7 @@ def doSearch(webURL):
         pagenum = content[-1].split("class=\"flag_pg\"")
         content[-1] = content[-1].split("<div id=\"mpages\">")[0]
         if (len(pagenum) > 1):
+            pagenum = pagenum[-2]
             pagenum = pagenum.split("s1d-")[-1]
             pagenum = pagenum.split(".")[0]
         else:
